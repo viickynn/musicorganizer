@@ -19,7 +19,6 @@ public class MusicOrganizer
         files = new ArrayList<>();
         
     }
-    
     /**
      * Add a file to the collection.
      * @param filename The file to be added.
@@ -28,7 +27,6 @@ public class MusicOrganizer
     {
         files.add(filename);
     }
-    
     /**
      * Return the number of files in the collection.
      * @return The number of files in the collection.
@@ -37,39 +35,50 @@ public class MusicOrganizer
     {
         return files.size();
     }
-    
-    /**
-     * List a file from the collection.
-     * @param index The index of the file to be listed.
-     */
-    public void listFile(int index)
+    public void checkIndex(int para) //question1
     {
-        if(index >= 0 && index < files.size()) {
+        if((para>=0)&&(para<=files.size()-1))
+        {
+            System.out.println("");
+        }
+        else
+        {
+            System.out.println("Valid range is 0 to size()-1");
+        }
+    }
+    public boolean validIndex(int para) //question2
+    {
+        if((para>=0)&&(para<=files.size()-1))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }  
+    public void listFile(int index) //question3
+    {
+        if(true) 
+        {
             String filename = files.get(index);
             System.out.println(filename);
         }
     }
-    
-    /**
-     * Remove a file from the collection.
-     * @param index The index of the file to be removed.
-     */
     public void removeFile(int index)
     {
-        if(index >= 0 && index < files.size()) {
+        if(true) 
+        {
             files.remove(index);
         }
     }
-    // question 1
-    public void checkIndex(int para)
+    //question4: public void listAllFiles(int index)
+    //question5: until the final index/file size
+    public void listAllFiles(int index) //question6
     {
-    if((para>=0)&&(para<=files.size()-1))
-    {
-        System.out.println("");
+        
     }
-    else
-        {
-        System.out.println("Valid range is 0 to size()-1");
-    }
-    }
-}
+}        
+    
+
+    

@@ -60,4 +60,16 @@ public class MusicOrganizer
             files.remove(index);
         }
     }
+    // question 1
+    public void checkIndex(int para)
+    {
+    if((para>=0)&&(para<=files.size()-1))
+    {
+        System.out.println("");
+    }
+    else
+        {
+        System.out.println("Valid range is 0 to size()-1");
+    }
+    }
 }
